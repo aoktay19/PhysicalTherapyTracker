@@ -1,0 +1,40 @@
+from SaveLoad import SaveLoad
+from Player import Player
+from Constants import PROFILES
+
+saver = SaveLoad()
+player = Player()
+player.set_name(PROFILES[0][1])
+player.set_img(PROFILES[0][0])
+player.set_is_instructions_completed(0)
+player.set_is_instructions_completed(1)
+player.set_is_instructions_completed(2)
+aa = """2024-05-13
+handsUp,6,1,52
+handsUp,6,3,89
+handsUp,6,5,98
+2024-05-13
+crossBody,15,0,5
+crossBody,15,2,13
+crossBody,15,5,10
+2024-05-14
+handsUp,6,0,114
+handsUp,6,3,76
+handsUp,6,3,76
+2024-05-14
+crossBody,15,4,11
+crossBody,15,2,13
+crossBody,15,5,10
+2024-05-15
+handsUp,6,0,120
+handsUp,6,3,120
+handsUp,6,3,100
+2024-05-16
+handsUp,6,2,58
+handsUp,6,1,105
+handsUp,6,1,179
+"""
+player.set_total_scores(aa)
+a = [player]
+
+saver.save(a)
